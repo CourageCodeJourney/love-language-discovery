@@ -1,0 +1,236 @@
+body {
+  font-family:sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: url(Love\ You\ Hearts\ GIF\ by\ Caro.gif) no-repeat center center fixed;
+  background-size: cover;
+}
+
+h1, h2, h3 {
+  font-family: 'Dancing Script', cursive;
+}
+
+#app-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  background: linear-gradient(135deg, #ff8de4, #ff53c2, #c850c0);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(41, 41, 41, 0.6);
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.142);
+}
+
+.title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+#language-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.hint {
+  font-size: 14px;
+  color: #f9ffff;
+  text-align: center;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.hint1{
+  font-size: 14px;
+  color: #f9ffff;
+  text-align: center;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.card {
+  background-color: white;
+  color: black;
+  padding: 15px 20px; /* Adjust padding as needed */
+  border-radius: 25px;
+  margin: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgb(5, 5, 5);
+  /* Add or modify these properties to change the size */
+  font-size: 0.9em; /* Adjust font size */
+  width: 100px; /* Set a fixed width */
+  height: 40px; /* Set a fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: #FF53C2; /* pink color */
+}
+
+#language-meanings {
+  margin-top: 20px; /* Adding some spacing */
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  text-align: left;
+}
+
+#quiz-container, #chart-container, #story-carousel, #map-container, #challenge-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.option, #start-quiz, #new-challenge, .share-btn, #prev-story, #next-story {
+  background-color: #FF69B4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.bar-container {
+  display: inline-block;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.bar {
+  width: 80px;
+  background-color: white;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.story-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px;
+  text-align: left;
+  position: relative;
+  display: none; /* Hide all stories by default */
+}
+
+.story-card:first-child {
+  display: block; /* Show only the first story initially */
+}
+.expand-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.marker {
+  display: inline-block;
+  font-size: 1rem; /* Reduced font size */
+  font-weight: bold;
+  padding: 6px 30px; /* Less padding for a smaller box */
+  margin: 3px; /* Smaller margins to reduce spacing */
+  border-radius: 6px; /* Slightly rounded edges */
+  background: linear-gradient(135deg, #FF53C2, #f8e9e4);
+  color: rgb(10, 10, 10);
+  text-shadow: 1px 1px 2px rgba(220, 208, 208, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.marker:hover {
+  transform: scale(1.05); /* Slightly smaller hover effect */
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+.day {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  margin: 3px;
+  line-height: 25px;
+}
+
+.completed {
+  background-color: #FF69B4; /* Pink for completed days */
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+footer {
+  margin-top: 50px;
+  padding: 5px;
+  text-align: center;
+  background: linear-gradient(135deg, #ff8de4, #ff53c2);
+  color: white;
+  font-weight: bold;
+  border-radius: 30px 30px 0 0;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#social-share {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.share-btn[data-platform="twitter"] {
+  background: #1DA1F2;
+}
+
+.share-btn[data-platform="facebook"] {
+  background: #1877F2;
+}
+
+.share-btn[data-platform="instagram"] {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.share-btn:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0px 6px 15px rgba(255, 83, 195, 0.3);
+}
+
+footer p {
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+}
