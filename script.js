@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function() {
 document.querySelectorAll('.share-btn').forEach(button => {
     button.addEventListener('click', () => {
         const platform = button.getAttribute('data-platform');
-        const url = encodeURIComponent("https://mylovelanguagequiz.com"); 
+        const url = encodeURIComponent("https://couragecodejourney.github.io/love-language-discovery/"); 
         const text = encodeURIComponent("I just discovered my love language! ❤️✨ Find out how you give and receive love. Take the quiz here:");
 
         let shareUrl = "";
