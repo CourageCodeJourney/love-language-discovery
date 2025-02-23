@@ -98,6 +98,14 @@ section {
   margin-top: 20px;
 }
 
+#results-hint {
+  font-size: 14px;
+  color: #f9ffff;
+  text-align: center;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
 .option, #start-quiz, #new-challenge, .share-btn, #prev-story, #next-story {
   background-color: #FF69B4;
   color: white;
@@ -151,14 +159,15 @@ section {
   background: linear-gradient(135deg, #FF53C2, #f8e9e4);
   color: rgb(10, 10, 10);
   text-shadow: 1px 1px 2px rgba(220, 208, 208, 0.3);
-  cursor: pointer;
+  cursor: default; 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap; /* Prevents text from wrapping */
 }
 
 .marker:hover {
-  transform: scale(1.05); /* Slightly smaller hover effect */
-  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
+  transform: scale(1.0); /* Removed scaling */
+  box-shadow: none; /* Removed shadow */
+  background: linear-gradient(135deg, #FF53C2, #f8e9e4); /*or add a very subtle color change*/
 }
 
 .day {

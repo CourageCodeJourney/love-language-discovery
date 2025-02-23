@@ -33,28 +33,34 @@ document.addEventListener("DOMContentLoaded", function() {
   const loveLanguageKeys = ["words", "acts", "gifts", "time", "touch"];
   
   function loadQuizQuestion() {
+    const questionCounter = document.getElementById("question-counter");
+    const resultsHint = document.getElementById("results-hint"); // Get the hint element
+
     if (quizIndex < quizQuestions.length) {
-      questionDisplay.textContent = quizQuestions[quizIndex].question;
-      const options = quizQuestions[quizIndex].options;
-      optionsContainer.innerHTML = "";
-      options.forEach((option, index) => {
-        const button = document.createElement("button");
-        button.classList.add("option");
-        button.textContent = option;
-        button.dataset.value = index;
-        button.addEventListener("click", function() {
-          loveLanguageScores[loveLanguageKeys[index]]++;
-          quizIndex++;
-          loadQuizQuestion();
+        questionCounter.textContent = `Question ${quizIndex + 1} of ${quizQuestions.length}`;
+        questionDisplay.textContent = quizQuestions[quizIndex].question;
+        const options = quizQuestions[quizIndex].options;
+        optionsContainer.innerHTML = "";
+        options.forEach((option, index) => {
+            const button = document.createElement("button");
+            button.classList.add("option");
+            button.textContent = option;
+            button.dataset.value = index;
+            button.addEventListener("click", function() {
+                loveLanguageScores[loveLanguageKeys[index]]++;
+                quizIndex++;
+                loadQuizQuestion();
+            });
+            optionsContainer.appendChild(button);
         });
-        optionsContainer.appendChild(button);
-      });
     } else {
-      updateChart();
-      questionDisplay.textContent = "Quiz Completed!";
-      optionsContainer.innerHTML = "";
+        questionCounter.textContent = "";
+        updateChart();
+        questionDisplay.textContent = "Quiz Completed!";
+        optionsContainer.innerHTML = "";
+        resultsHint.style.display = "block"; // Show the hint
     }
-  }
+}
   
   function updateChart() {
     bars.forEach(bar => {
